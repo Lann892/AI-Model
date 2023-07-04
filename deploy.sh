@@ -9,15 +9,16 @@ npm run build
 # navigate into the build output directory
 cd dist
 
-# place .nojekyll to bypass Jekyll processing
-echo > .nojekyll
-
 # if you are deploying to a custom domain
 # echo 'www.example.com' > CNAME
 
+# Initialize a new Git repository
 git init
-git checkout -b main
+
+# Stage all files
 git add -A
+
+# Commit the changes
 git commit -m 'deploy'
 
 # Replace "<YOUR_USERNAME>" with your GitHub username
