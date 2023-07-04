@@ -9,13 +9,14 @@ function App() {
 
   useEffect(() => {
     async function cargarModelo() {
-  try {
-    const model = await tf.loadLayersModel("/model.json");
-    setModelo(model);
-    } catch (error) {
-      console.error("Error al cargar el modelo:", error);
+    try {
+        const model = await tf.loadLayersModel("/model.json");
+        setModelo(model);
+      } catch (error) {
+        console.error("Error al cargar el modelo:", error);
+      }
     }
-  }
+    cargarModelo()
   }, []);
 
   function cambiarCelsius(evento) {
